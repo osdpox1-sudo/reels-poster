@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How it works — Reels Poster</title>
+<meta name="description" content="A walkthrough of Reels Poster: connecting your own accounts, preparing posts, setting schedules, publishing, and what each platform permission is used for.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="index.html">Reels<span>Poster</span></a>
+    <nav class="site">
+      <a href="index.html">Home</a>
+      <a href="features.html">Features</a>
+      <a href="how-it-works.html" class="on">How it works</a>
+      <a href="faq.html">FAQ</a>
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <h1>How it works</h1>
+    <p class="lead">From connecting an account to seeing a post go out, and what
+      each permission is actually used for.</p>
+  </div>
+</section>
+
+<main class="wrap">
+
+  <h2>1. Install and open it</h2>
+  <p>Reels Poster runs on your own computer. Starting it opens a dashboard in
+    your browser at a local address. Nothing is uploaded anywhere at this point —
+    the tool is simply a program running on your machine.</p>
+
+  <h2>2. Connect an account</h2>
+  <p>For each account you want to post to, you press <b>Connect</b> and are taken
+    to that platform's own login and consent screen. You sign in as yourself and
+    decide whether to grant access. The tool never sees your password.</p>
+  <p>What comes back is an access token tied to that one account. It is stored on
+    your computer and used only to publish the posts you schedule.</p>
+  <div class="note">
+    <p>You can withdraw access at any time from the platform's own settings —
+      for example under connected or authorised apps. The tool immediately stops
+      being able to post to that account.</p>
+  </div>
+
+  <h2>3. Prepare your posts</h2>
+  <p>Add your videos to the tool. Each post gets a caption, which you can edit
+    freely, and a category such as <em>books</em> or <em>films</em>. The category
+    is what decides which accounts it will be offered to.</p>
+
+  <h2>4. Set the schedule</h2>
+  <p>Each destination account has its own posting times and its own timezone.
+    Once set, queued posts are given slots automatically and appear on the
+    calendar, so you can see the week at a glance and rearrange it before
+    anything is published.</p>
+
+  <h2>5. Publish</h2>
+  <p>At the scheduled time the tool uploads the post through the platform's
+    official API. If the account is set to manual approval, nothing goes out
+    until you press publish on that row yourself.</p>
+  <p>Each attempt is written to a log with its outcome. A failure is retried a
+    few times with increasing delays, and if it still fails the reason is kept
+    so you can see what happened.</p>
+
+  <h2>What each permission is used for</h2>
+  <table>
+    <tr><th>Permission</th><th>Why it is needed</th></tr>
+    <tr>
+      <td>Basic profile information</td>
+      <td>To show which account you connected, so several connected accounts can
+          be told apart in the interface. No profile data is stored beyond the
+          display name shown on the account card.</td>
+    </tr>
+    <tr>
+      <td>Upload content to the account</td>
+      <td>To send a prepared video to the account so its owner can finish and
+          publish it from the platform's own app.</td>
+    </tr>
+    <tr>
+      <td>Publish content to the account</td>
+      <td>To publish a post at the scheduled time, with the caption and privacy
+          setting chosen in the tool beforehand.</td>
+    </tr>
+  </table>
+  <p class="muted">Only the permissions needed for the way you have configured an
+    account are requested. An account set to hand videos over for manual
+    finishing is never asked for publishing rights.</p>
+
+  <h2>What the tool does not do</h2>
+  <ul>
+    <li>It does not post to any account that has not been connected by its own
+      owner.</li>
+    <li>It does not read, collect or store other people's private information.</li>
+    <li>It does not follow, like, comment, or message anyone.</li>
+    <li>It does not share your access tokens with anyone — they stay on your
+      computer.</li>
+  </ul>
+
+  <h2>If something goes wrong</h2>
+  <p>Common cases and what they mean are listed in the <a href="faq.html">FAQ</a>.
+    If an account's access has expired or been withdrawn, the tool stops posting
+    to it and shows an alert asking you to connect it again.</p>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="links">
+      <a href="index.html">Home</a>
+      <a href="features.html">Features</a>
+      <a href="how-it-works.html">How it works</a>
+      <a href="faq.html">FAQ</a>
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+    </div>
+    <div>Reels Poster — a self-hosted scheduling tool for your own social
+      accounts. Not affiliated with TikTok, Instagram, Threads or Meta.</div>
+  </div>
+</footer>
+
+</body>
+</html>
